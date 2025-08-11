@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="1-create-applications-table" author="lokesh">
+        <createTable tableName="applications">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="company_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="job_title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="date_applied" type="DATE"/>
+
+            <column name="job_link" type="VARCHAR(500)"/>
+
+            <column name="status" type="VARCHAR(50)"/>
+
+            <column name="notes" type="TEXT"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
